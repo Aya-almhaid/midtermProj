@@ -1,0 +1,100 @@
+/* Reset + base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+
+  /* Professional store background */
+  background-image: url("https://thumbs.dreamstime.com/b/hand-holding-coins-to-stack-growth-plant-step-concept-saving-money-finance-accounting-135832008.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Remove width restriction so background fills screen */
+#root {
+  min-height: 100vh;
+}
+
+/* Theme modes */
+body.dark {
+  background-color: #111827;
+  color:black;
+}
+
+body.light {
+  background-color: black;
+  color: #111;
+}
+
+/* Main container over background */
+.main-container {
+  backdrop-filter: blur(6px);
+  /*|background: rgba(255, 255, 255, 0.9);*/
+
+  border-radius: 12px;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product card */
+.product-card {
+  background: black;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Product image */
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Buttons */
+button {
+  background: #16a34a;
+  color:black;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #15803d;
+  transform: scale(1.05);
+}
+
+/* Headings */
+h1,
+h2 {
+  color: #0f172a;
+  margin-bottom: 16px;
+  text-align: center;
+}
